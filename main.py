@@ -7,27 +7,27 @@ E-Mail: testcn@vip.qq.com
 import subprocess
 import sys
 import xlwt
-import json
 
-windowsLib = '/lib/Windows/'
-macLib = '/lib/MAC/'
 
-sysPlatform = sys.platform
-if 'win32' in sysPlatform:
-    useLib = sys.path[0] + windowsLib + 'MediaInfo.exe'
-elif 'darwin' in sysPlatform:
-    # libPath = sys.path[0] + macLib
-    print("Your system is not support!")
-
-print("Your Lib Path: ", useLib)
-
-mediaFile = r'E:\TestVideo\测试视频\6K\6K全景迪拜.mp4'
-outJSON = 'testJson.json'
-
-# cmd = [useLib, '--Output=JSON', mediaFile, '--LogFile=%s' % outJSON]
-cmd = [useLib, '--Output=JSON', mediaFile]
-print(cmd)
-run = subprocess.Popen(cmd, shell=True, stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+# windowsLib = '/lib/Windows/'
+# macLib = '/lib/MAC/'
+#
+# sysPlatform = sys.platform
+# if 'win32' in sysPlatform:
+#     useLib = sys.path[0] + windowsLib + 'MediaInfo.exe'
+# elif 'darwin' in sysPlatform:
+#     # libPath = sys.path[0] + macLib
+#     print("Your system is not support!")
+#
+# print("Your Lib Path: ", useLib)
+#
+# mediaFile = r'E:\TestVideo\测试视频\6K\6K全景迪拜.mp4'
+# outJSON = 'testJson.json'
+#
+# # cmd = [useLib, '--Output=JSON', mediaFile, '--LogFile=%s' % outJSON]
+# cmd = [useLib, '--Output=JSON', mediaFile]
+# print(cmd)
+# run = subprocess.Popen(cmd, shell=True, stderr=subprocess.PIPE, stdout=subprocess.PIPE)
 # outPut = run.stdout.read()
 
 # for i in outPut:
@@ -47,15 +47,9 @@ def save2xls(list):
     wb.save('MediaInfo.xls')
 
 
-# 读取数据
-with open(r'./6k_JSON.json', 'r',encoding='UTF-8') as f:
-    data = json.load(f)
-
-track = data['media']['track']
-
-for i in track:
-    print(i['@type'])
 # 扩展名 FileExtension
+print()
+
 # 格式 Format
 # 文件大小 FileSize
 # 平均码率 OverallBitRate
