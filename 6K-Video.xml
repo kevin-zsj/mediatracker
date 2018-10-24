@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MediaInfo xmlns="https://mediaarea.net/mediainfo" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://mediaarea.net/mediainfo https://mediaarea.net/mediainfo/mediainfo_2_0.xsd" version="2.0">
+    <creatingLibrary version="18.08.1" url="https://mediaarea.net/MediaInfo">MediaInfoLib</creatingLibrary>
+    <media ref="E:\TestVideo\测试视频\6K\6K全景迪拜.mp4">
+        <track type="概要">
+            <VideoCount>1</VideoCount>
+            <AudioCount>1</AudioCount>
+            <FileExtension>mp4</FileExtension>
+            <Format>MPEG-4</Format>
+            <Format_Profile>Base Media</Format_Profile>
+            <CodecID>iso4</CodecID>
+            <CodecID_Compatible>iso4/hvc1/iso6</CodecID_Compatible>
+            <FileSize>194451447</FileSize>
+            <Duration>216.153</Duration>
+            <OverallBitRate_Mode>VBR</OverallBitRate_Mode>
+            <OverallBitRate>7196808</OverallBitRate>
+            <FrameRate>29.970</FrameRate>
+            <FrameCount>6474</FrameCount>
+            <StreamSize>117534</StreamSize>
+            <HeaderSize>117458</HeaderSize>
+            <DataSize>194333921</DataSize>
+            <FooterSize>68</FooterSize>
+            <IsStreamable>Yes</IsStreamable>
+            <Encoded_Date>UTC 2017-01-11 00:39:58</Encoded_Date>
+            <Tagged_Date>UTC 2017-01-11 00:39:58</Tagged_Date>
+            <File_Created_Date>UTC 2018-01-03 07:02:33.447</File_Created_Date>
+            <File_Created_Date_Local>2018-01-03 15:02:33.447</File_Created_Date_Local>
+            <File_Modified_Date>UTC 2017-12-25 03:35:20.762</File_Modified_Date>
+            <File_Modified_Date_Local>2017-12-25 11:35:20.762</File_Modified_Date_Local>
+        </track>
+        <track type="视频">
+            <StreamOrder>0</StreamOrder>
+            <ID>1</ID>
+            <Format>HEVC</Format>
+            <Format_Profile>Main</Format_Profile>
+            <Format_Level>6</Format_Level>
+            <Format_Tier>Main</Format_Tier>
+            <CodecID>hvc1</CodecID>
+            <Duration>216.015</Duration>
+            <BitRate>7032824</BitRate>
+            <BitRate_Maximum>17984248</BitRate_Maximum>
+            <Width>6144</Width>
+            <Height>3072</Height>
+            <Sampled_Width>6144</Sampled_Width>
+            <Sampled_Height>3072</Sampled_Height>
+            <PixelAspectRatio>1.000</PixelAspectRatio>
+            <DisplayAspectRatio>2.000</DisplayAspectRatio>
+            <Rotation>0.000</Rotation>
+            <FrameRate_Mode>CFR</FrameRate_Mode>
+            <FrameRate>29.970</FrameRate>
+            <FrameCount>6474</FrameCount>
+            <ColorSpace>YUV</ColorSpace>
+            <ChromaSubsampling>4:2:0</ChromaSubsampling>
+            <BitDepth>8</BitDepth>
+            <StreamSize>189900339</StreamSize>
+            <Encoded_Library>x265 - 2.1+2-c0d91c2b4048:[Windows][GCC 6.2.0][64 bit] 8bit+10bit+12bit</Encoded_Library>
+            <Encoded_Library_Name>x265</Encoded_Library_Name>
+            <Encoded_Library_Version>2.1+2-c0d91c2b4048:[Windows][GCC 6.2.0][64 bit] 8bit+10bit+12bit</Encoded_Library_Version>
+            <Encoded_Library_Settings>wpp / ctu=64 / min-cu-size=8 / max-tu-size=32 / tu-intra-depth=1 / tu-inter-depth=1 / me=3 / subme=3 / merange=57 / rect / no-amp / max-merge=3 / temporal-mvp / no-early-skip / rskip / rdpenalty=0 / no-tskip / no-tskip-fast / strong-intra-smoothing / no-lossless / no-cu-lossless / no-constrained-intra / no-fast-intra / open-gop / no-temporal-layers / interlace=0 / keyint=250 / min-keyint=25 / scenecut=40 / rc-lookahead=25 / lookahead-slices=4 / bframes=4 / bframe-bias=0 / b-adapt=2 / ref=4 / limit-refs=3 / limit-modes / weightp / no-weightb / aq-mode=1 / qg-size=32 / aq-strength=1.00 / cbqpoffs=0 / crqpoffs=0 / rd=4 / psy-rd=2.00 / rdoq-level=2 / psy-rdoq=1.00 / log2-max-poc-lsb=8 / no-rd-refine / signhide / deblock=0:0 / sao / no-sao-non-deblock / b-pyramid / cutree / no-intra-refresh / rc=2 / pass / bitrate=7011 / qcomp=0.60 / qpmin=0 / qpmax=69 / qpstep=4 / cplxblur=20.0 / qblur=0.5 / ipratio=1.40 / pbratio=1.30</Encoded_Library_Settings>
+            <Encoded_Date>UTC 2017-01-11 00:39:58</Encoded_Date>
+            <Tagged_Date>UTC 2017-01-11 00:40:02</Tagged_Date>
+            <extra>
+                <Codec_configuration_box>hvcC</Codec_configuration_box>
+            </extra>
+        </track>
+        <track type="音频">
+            <StreamOrder>1</StreamOrder>
+            <ID>2</ID>
+            <Format>AAC</Format>
+            <Format_Settings_SBR>No (Explicit)</Format_Settings_SBR>
+            <Format_AdditionalFeatures>LC</Format_AdditionalFeatures>
+            <CodecID>mp4a-40-2</CodecID>
+            <Duration>216.153</Duration>
+            <BitRate_Mode>VBR</BitRate_Mode>
+            <BitRate>164088</BitRate>
+            <BitRate_Maximum>185976</BitRate_Maximum>
+            <Channels>2</Channels>
+            <ChannelPositions>Front: L R</ChannelPositions>
+            <ChannelLayout>L R</ChannelLayout>
+            <SamplesPerFrame>1024</SamplesPerFrame>
+            <SamplingRate>44100</SamplingRate>
+            <SamplingCount>9532347</SamplingCount>
+            <FrameRate>43.066</FrameRate>
+            <FrameCount>9309</FrameCount>
+            <Compression_Mode>Lossy</Compression_Mode>
+            <StreamSize>4433574</StreamSize>
+            <StreamSize_Proportion>0.02280</StreamSize_Proportion>
+            <Language>en</Language>
+            <Encoded_Date>UTC 2017-01-10 18:29:46</Encoded_Date>
+            <Tagged_Date>UTC 2017-01-11 00:40:02</Tagged_Date>
+        </track>
+    </media>
+</MediaInfo>

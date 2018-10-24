@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MediaInfo xmlns="https://mediaarea.net/mediainfo" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://mediaarea.net/mediainfo https://mediaarea.net/mediainfo/mediainfo_2_0.xsd" version="2.0">
+    <creatingLibrary version="18.08.1" url="https://mediaarea.net/MediaInfo">MediaInfoLib</creatingLibrary>
+    <media ref="D:\Workspace\Codespace\ADT-workspace\pad-test\PadAndroidO\v0.1\resource\blackmusic\mp3\EB04-MP3-16bit-44.1kHz-CBR-64kbps-stereo.mp3">
+        <track type="概要">
+            <AudioCount>1</AudioCount>
+            <FileExtension>mp3</FileExtension>
+            <Format>MPEG Audio</Format>
+            <FileSize>1674384</FileSize>
+            <Duration>209.293</Duration>
+            <OverallBitRate_Mode>CBR</OverallBitRate_Mode>
+            <OverallBitRate>64000</OverallBitRate>
+            <StreamSize>0</StreamSize>
+            <File_Created_Date>UTC 2018-04-23 07:54:14.610</File_Created_Date>
+            <File_Created_Date_Local>2018-04-23 15:54:14.610</File_Created_Date_Local>
+            <File_Modified_Date>UTC 2018-04-23 07:54:14.610</File_Modified_Date>
+            <File_Modified_Date_Local>2018-04-23 15:54:14.610</File_Modified_Date_Local>
+            <Encoded_Library>LAME</Encoded_Library>
+        </track>
+        <track type="音频">
+            <Format>MPEG Audio</Format>
+            <Format_Version>1</Format_Version>
+            <Format_Profile>Layer 3</Format_Profile>
+            <Format_Settings_Mode>Joint stereo</Format_Settings_Mode>
+            <Format_Settings_ModeExtension>MS Stereo</Format_Settings_ModeExtension>
+            <Duration>209.293</Duration>
+            <BitRate_Mode>CBR</BitRate_Mode>
+            <BitRate>64000</BitRate>
+            <Channels>2</Channels>
+            <SamplesPerFrame>1152</SamplesPerFrame>
+            <SamplingRate>44100</SamplingRate>
+            <SamplingCount>9229824</SamplingCount>
+            <FrameRate>38.281</FrameRate>
+            <FrameCount>8012</FrameCount>
+            <Compression_Mode>Lossy</Compression_Mode>
+            <StreamSize>1674344</StreamSize>
+            <StreamSize_Proportion>0.99998</StreamSize_Proportion>
+            <Encoded_Library>LAME</Encoded_Library>
+        </track>
+    </media>
+</MediaInfo>
