@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
-'''
+"""
 Author: Kevin.Zhang
 E-Mail: testcn@vip.qq.com
-'''
+"""
 
 import subprocess
 import sys
@@ -35,32 +35,22 @@ elif 'darwin' in sysPlatform:
 # print(outPut)
 # print(type(outPut))
 
-def save2xls(list):
-    wb = xlwt.Workbook()
-    ws = wb.add_sheet('MediaInfo')
 
-    for line in list:
-        w = len(line)
-    ws.write(2, 0, 1)
-    ws.write(2, 1, 1)
-
-    wb.save('MediaInfo.xls')
-
-
-class getInfo:
-
-    def __init__(self, xmlFile):
-        if xmlFile:
-            self.tree = ET.parse(xmlFile)
+# Get multimedia info.
+class GetInfo:
+    def __init__(self, xml_file):
+        if xml_file:
+            self.tree = ET.parse(xml_file)
             self.root = self.tree.getroot()[1]
             self.info = dict()
 
-    def getGeneralInfo(self):
+    def get_general_info(self):
         # 文件路径
         print('文件路径：', self.root.attrib['ref'])
         self.info['generalVideoFilePath'] = self.root.attrib['ref']
         for child in self.root[0]:
             # 扩展名 FileExtension
+            # TODO: Get file extension.
             # print('扩展名：')
             # 格式 Format
             if child.tag.strip().endswith('Format'):
@@ -75,7 +65,7 @@ class getInfo:
                 print('视频平均码率', ":", child.text)
                 self.info['generalVideoOverallBitRate'] = child.text
 
-    def getVideoInfo(self):
+    def get_video_info(self):
         for child in self.root[1]:
             # 视频编码格式 Format
             if child.tag.strip().endswith('Format'):
@@ -118,7 +108,7 @@ class getInfo:
                 print('视频位深', ":", child.text)
                 self.info['videoBitDepth'] = child.text
 
-    def getAudioInfo(self):
+    def get_audio_info(self):
         for child in self.root[2]:
             # 格式 Format
             if child.tag.strip().endswith('Format'):
@@ -146,14 +136,81 @@ class getInfo:
                 self.info['audioLanguage'] = child.text
 
     def main(self):
-        self.getGeneralInfo()
-        self.getVideoInfo()
-        self.getAudioInfo()
+        self.get_general_info()
+        self.get_video_info()
+        self.get_audio_info()
         return self.info
+
+# Save data to xls.
+def save2xls(lst):
+    wb = xlwt.Workbook()
+    ws = wb.add_sheet('MediaInfo')
+
+    header = [
+        '文件路径',
+        '视频格式',
+        '视频大小',
+        '视频平均码率',
+        '视频编码格式',
+        '视频格式概况',
+        '视频码率',
+        '视频宽度',
+        '视频高度',
+        '视频画面比例',
+        '视频画面帧率',
+        '视频色彩空间',
+        '视频色彩抽样',
+        '视频位深',
+        '音频编码格式',
+        '音频码率',
+        '音频声道',
+        '音频采样率',
+        '音频压缩模式',
+        '音频语言'
+    ]
+
+    for i, val in enumerate(header):
+        print("写入： ", i, val)
+        ws.write(0, i, val)
+
+    row = 1
+    for d in lst:
+        print('d: ',d)
+        ws.write(row, 0, d.get('generalVideoFilePath'))
+        ws.write(row, 1, d.get('generalFormat'))
+        ws.write(row, 2, d.get('generalVideoFileSize'))
+        ws.write(row, 3, d.get('generalVideoOverallBitRate'))
+        ws.write(row, 4, d.get('videoEncodeFormat'))
+        ws.write(row, 5, d.get('videoFormat_Level'))
+        ws.write(row, 6, d.get('videoBitRate'))
+        ws.write(row, 7, d.get('videoWidth'))
+        ws.write(row, 8, d.get('videoHeight'))
+        ws.write(row, 9, d.get('videoDisplayAspectRatio'))
+        ws.write(row, 10, d.get('videoFrameRate'))
+        ws.write(row, 11, d.get('videoColorSpace'))
+        ws.write(row, 12, d.get('videoChromaSubsampling'))
+        ws.write(row, 13, d.get('videoBitDepth'))
+        ws.write(row, 14, d.get('audioEncodeFormat'))
+        ws.write(row, 15, d.get('audioBitRate'))
+        ws.write(row, 16, d.get('audioChannels'))
+        ws.write(row, 17, d.get('audioSamplingRate'))
+        ws.write(row, 18, d.get('audioCompression_Mode'))
+        ws.write(row, 19, d.get('audioLanguage'))
+        row += 1
+
+    wb.save('MediaInfo.xls')
+
+
+# TODO: Traverse all multimedia files in the directory (including subdirectories).
+def traverse_multimedia():
+    return None
 
 
 if __name__ == '__main__':
     xml = '6K-Video.xml'
-    info = getInfo(xml).main()
-    print(info)
-    print('Count :', len(info))
+    info = GetInfo(xml).main()
+    mediaInfoLists = []
+    mediaInfoLists.append(info)
+    save2xls(mediaInfoLists)
+    print(mediaInfoLists)
+    print('Count :', len(mediaInfoLists), len(info))
